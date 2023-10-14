@@ -8,7 +8,7 @@ import useAuth from "@/hooks/useAuth";
 import { useRecoilValue } from "recoil";
 import { useState } from "react";
 import { modalState } from "@/atoms/modalAtom";
-import Modal from "@/components/Modal";
+import Nmodal from "@/components/Nmodal";
 
 interface Props {
   netflixOriginals: Movie[];
@@ -60,7 +60,7 @@ const Home = ({
           <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
-      {showModal && <Modal/>}
+      {showModal && <Nmodal/>}
     </div>
   );
 };

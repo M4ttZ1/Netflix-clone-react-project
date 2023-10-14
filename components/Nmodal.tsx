@@ -1,4 +1,4 @@
-import MuiModal from "@Mui/material/Modal";
+import Modal from '@mui/material/Modal';
 import { useRecoilState } from "recoil";
 import { modalState, movieState } from "@/atoms/modalAtom";
 import { HandThumbUpIcon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -8,7 +8,7 @@ import ReactPlayer from "react-player/lazy";
 import { FaPlay, FaVolumeOff, FaVolumeUp } from "react-icons/fa";
 import { PlusIcon } from "@heroicons/react/24/solid";
 
-function Modal() {
+function Nmodal() {
   const [showModal, setShowModal] = useRecoilState(modalState);
   const [movie, setMovie] = useRecoilState(movieState);
   const [trailer, setTrailer] = useState("");
@@ -48,7 +48,7 @@ function Modal() {
   };
 
   return (
-    <MuiModal
+    <Modal
       open={showModal}
       onClose={handleClose}
       className="fixed !top-7 left-0 right-0 z-50 mx-auto max-w-5xl
@@ -133,8 +133,8 @@ function Modal() {
           </div>
         </div>
       </>
-    </MuiModal>
+    </Modal>
   );
 }
 
-export default Modal;
+export default Nmodal;
