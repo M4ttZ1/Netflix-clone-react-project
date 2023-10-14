@@ -38,7 +38,8 @@ const Home = ({
 
   return (
     <div
-      className="relative h-screen bg-gradient-to-b lg:h-[140vh]"
+      className={`relative h-screen bg-gradient-to-b lg:h-[140vh] ${
+        showModal && "!h-screen overflow-hidden"}`}
     >
       <Head>
         <title>Home - Netflix</title>
